@@ -5,82 +5,350 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#061426">
   <meta name="description" content="Dashboard interativo de monitoramento ambiental do StormWatch.">
+
   <title>Dashboard | StormWatch</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/dashboard.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+    defer>
+  </script>
+
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/dashboard.js" defer></script>
 </head>
+
 <body>
+
   <div id="header"></div>
+
   <main class="inner-page dashboard-page">
+
+    <!-- Apresentação do dashboard -->
     <section class="dashboard-hero">
       <div class="container dashboard-hero-inner">
+
         <div>
-          <span class="eyebrow"><span class="pulse"></span> CENTRAL DE MONITORAMENTO</span>
+          <span class="eyebrow">
+            <span class="pulse"></span>
+            CENTRAL DE MONITORAMENTO
+          </span>
+
           <h1>Dashboard <span>StormWatch</span></h1>
-          <p>Explore os registros pluviométricos, hidrológicos e geotécnicos em um só lugar. Escolha uma área, filtre os dados e acompanhe os padrões observados no período.</p>
+
+          <p>
+            Explore os registros pluviométricos, hidrológicos e geotécnicos
+            em um só lugar. Escolha uma área, filtre os dados e acompanhe
+            os padrões observados no período.
+          </p>
         </div>
-        <div class="period-card"><span>PERÍODO ANALISADO</span><strong>01 — 31 JAN 2026</strong><small>Base histórica · não representa monitoramento em tempo real</small></div>
+
+        <div class="period-card">
+          <span>PERÍODO ANALISADO</span>
+          <strong>01 — 31 JAN 2026</strong>
+          <small>
+            Base histórica · não representa monitoramento em tempo real
+          </small>
+        </div>
+
       </div>
     </section>
 
+    <!-- Área principal do dashboard -->
     <section class="dashboard-section container">
+
+      <!-- Cabeçalho e status dos dados -->
       <div class="dashboard-toolbar">
+
         <div>
           <span class="eyebrow">VISÃO EXPLORATÓRIA</span>
+
           <h2>Explore os dados ambientais</h2>
-          <p>Selecione o tipo de monitoramento para atualizar os indicadores e gráficos.</p>
+
+          <p>
+            Selecione o tipo de monitoramento para atualizar
+            os indicadores e gráficos.
+          </p>
         </div>
-        <span class="data-status" id="dataStatus"><i></i> Carregando base...</span>
+
+        <span class="data-status" id="dataStatus">
+          <i></i>
+          Carregando base...
+        </span>
+
       </div>
 
-      <div class="source-tabs" role="tablist" aria-label="Tipo de monitoramento">
-        <button class="source-tab active" type="button" data-source="chuva" role="tab" aria-selected="true"><span>☔</span> Chuvas</button>
-        <button class="source-tab" type="button" data-source="hidrologia" role="tab" aria-selected="false"><span>〰</span> Hidrologia</button>
-        <button class="source-tab" type="button" data-source="geotecnia" role="tab" aria-selected="false"><span>⌁</span> Geotecnia</button>
-        <button class="source-tab" type="button" data-source="todos" role="tab" aria-selected="false"><span>◈</span> Visão integrada</button>
+      <!-- Seleção do tipo de monitoramento -->
+      <div
+        class="source-tabs"
+        role="tablist"
+        aria-label="Tipo de monitoramento">
+
+        <button
+          class="source-tab active"
+          type="button"
+          data-source="chuva"
+          role="tab"
+          aria-selected="true">
+
+          <span>☔</span>
+          Chuvas
+        </button>
+
+        <button
+          class="source-tab"
+          type="button"
+          data-source="hidrologia"
+          role="tab"
+          aria-selected="false">
+
+          <span>〰</span>
+          Hidrologia
+        </button>
+
+        <button
+          class="source-tab"
+          type="button"
+          data-source="geotecnia"
+          role="tab"
+          aria-selected="false">
+
+          <span>⌁</span>
+          Geotecnia
+        </button>
+
+        <button
+          class="source-tab"
+          type="button"
+          data-source="todos"
+          role="tab"
+          aria-selected="false">
+
+          <span>◈</span>
+          Visão integrada
+        </button>
+
       </div>
 
+      <!-- Filtros -->
       <div class="filter-panel">
-        <label>Município<select id="municipalityFilter"><option value="all">Todos os municípios</option></select></label>
-        <label>Estação<select id="stationFilter"><option value="all">Todas as estações</option></select></label>
-        <label>Sensor<select id="sensorFilter"><option value="all">Todos os sensores</option></select></label>
-        <label>Visualizar<select id="metricFilter"><option value="avg">Média dos registros</option><option value="max">Maior valor registrado</option><option value="count">Quantidade de registros</option></select></label>
-        <button class="filter-reset" id="resetFilters" type="button">↺ Limpar filtros</button>
+
+        <label>
+          Município
+          <select id="municipalityFilter">
+            <option value="all">Todos os municípios</option>
+          </select>
+        </label>
+
+        <label>
+          Estação
+          <select id="stationFilter">
+            <option value="all">Todas as estações</option>
+          </select>
+        </label>
+
+        <label>
+          Sensor
+          <select id="sensorFilter">
+            <option value="all">Todos os sensores</option>
+          </select>
+        </label>
+
+        <label>
+          Visualizar
+          <select id="metricFilter">
+            <option value="avg">Média dos registros</option>
+            <option value="max">Maior valor registrado</option>
+            <option value="count">Quantidade de registros</option>
+          </select>
+        </label>
+
+        <button
+          class="filter-reset"
+          id="resetFilters"
+          type="button">
+          ↺ Limpar filtros
+        </button>
+
       </div>
 
+      <!-- Indicadores -->
       <div class="metric-grid" aria-live="polite">
-        <article class="metric-card"><span class="metric-icon">▤</span><small>REGISTROS NO RECORTE</small><strong id="kpiRecords">—</strong><span id="kpiRecordsHint">Registros selecionados</span></article>
-        <article class="metric-card"><span class="metric-icon">⌖</span><small>ESTAÇÕES</small><strong id="kpiStations">—</strong><span>Estações no filtro atual</span></article>
-        <article class="metric-card"><span class="metric-icon">▦</span><small>MUNICÍPIOS</small><strong id="kpiCities">—</strong><span>Municípios no filtro atual</span></article>
-        <article class="metric-card"><span class="metric-icon">◷</span><small>DIAS COM REGISTROS</small><strong id="kpiDays">—</strong><span>Dentro do período analisado</span></article>
+
+        <article class="metric-card">
+          <span class="metric-icon">▤</span>
+          <small>REGISTROS NO RECORTE</small>
+          <strong id="kpiRecords">—</strong>
+          <span id="kpiRecordsHint">Registros selecionados</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-icon">⌖</span>
+          <small>ESTAÇÕES</small>
+          <strong id="kpiStations">—</strong>
+          <span>Estações no filtro atual</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-icon">▦</span>
+          <small>MUNICÍPIOS</small>
+          <strong id="kpiCities">—</strong>
+          <span>Municípios no filtro atual</span>
+        </article>
+
+        <article class="metric-card">
+          <span class="metric-icon">◷</span>
+          <small>DIAS COM REGISTROS</small>
+          <strong id="kpiDays">—</strong>
+          <span>Dentro do período analisado</span>
+        </article>
+
       </div>
 
+      <!-- Gráficos -->
       <div class="chart-grid">
+
         <article class="chart-panel chart-main">
-          <div class="chart-heading"><div><span class="eyebrow">SÉRIE TEMPORAL</span><h3 id="mainChartTitle">Comportamento das chuvas</h3><p id="mainChartDescription">Média diária dos registros pluviométricos.</p></div><span class="chart-tag">31 DIAS</span></div>
-          <div class="chart-wrap"><canvas id="mainChart" aria-label="Gráfico temporal dos dados selecionados" role="img"></canvas></div>
-          <p class="chart-footnote" id="chartFootnote">O eixo vertical apresenta valores registrados; a unidade não foi informada na fonte.</p>
+
+          <div class="chart-heading">
+
+            <div>
+              <span class="eyebrow">SÉRIE TEMPORAL</span>
+
+              <h3 id="mainChartTitle">
+                Comportamento das chuvas
+              </h3>
+
+              <p id="mainChartDescription">
+                Média diária dos registros pluviométricos.
+              </p>
+            </div>
+
+            <span class="chart-tag">31 DIAS</span>
+
+          </div>
+
+          <div class="chart-wrap">
+            <canvas
+              id="mainChart"
+              aria-label="Gráfico temporal dos dados selecionados"
+              role="img">
+            </canvas>
+          </div>
+
+          <p class="chart-footnote" id="chartFootnote">
+            O eixo vertical apresenta valores registrados;
+            a unidade não foi informada na fonte.
+          </p>
+
         </article>
+
         <article class="chart-panel chart-side">
-          <div class="chart-heading"><div><span class="eyebrow">COMPOSIÇÃO</span><h3>Registros por sensor</h3><p>Distribuição no recorte selecionado.</p></div></div>
-          <div class="chart-wrap doughnut-wrap"><canvas id="sensorChart" aria-label="Gráfico de distribuição dos registros por sensor" role="img"></canvas></div>
+
+          <div class="chart-heading">
+
+            <div>
+              <span class="eyebrow">COMPOSIÇÃO</span>
+
+              <h3>Registros por sensor</h3>
+
+              <p>
+                Distribuição no recorte selecionado.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="chart-wrap doughnut-wrap">
+            <canvas
+              id="sensorChart"
+              aria-label="Gráfico de distribuição dos registros por sensor"
+              role="img">
+            </canvas>
+          </div>
+
           <div id="sensorLegend" class="sensor-legend"></div>
+
         </article>
+
       </div>
 
+      <!-- Tabela de detalhamento -->
       <article class="chart-panel table-panel">
-        <div class="chart-heading"><div><span class="eyebrow">DETALHAMENTO</span><h3>Resumo por município</h3><p>Agregação dos registros conforme os filtros selecionados.</p></div><span class="chart-tag">DADOS HISTÓRICOS</span></div>
-        <div class="table-scroll"><table><thead><tr><th>Município</th><th>Estações</th><th>Registros</th><th>Média registrada</th><th>Máximo</th></tr></thead><tbody id="municipalityTable"><tr><td colspan="5">Carregando dados...</td></tr></tbody></table></div>
+
+        <div class="chart-heading">
+
+          <div>
+            <span class="eyebrow">DETALHAMENTO</span>
+
+            <h3>Resumo por município</h3>
+
+            <p>
+              Agregação dos registros conforme os filtros selecionados.
+            </p>
+          </div>
+
+          <span class="chart-tag">DADOS HISTÓRICOS</span>
+
+        </div>
+
+        <div class="table-scroll">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Município</th>
+                <th>Estações</th>
+                <th>Registros</th>
+                <th>Média registrada</th>
+                <th>Máximo</th>
+              </tr>
+            </thead>
+
+            <tbody id="municipalityTable">
+              <tr>
+                <td colspan="5">Carregando dados...</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+        </div>
+
       </article>
 
-      <aside class="dashboard-notice"><span>ⓘ</span><div><strong>Como interpretar este painel</strong><p>Os gráficos apresentam medições históricas, não previsões nem alertas oficiais. Os arquivos de origem não informam as unidades de medida nem os limiares oficiais de risco. Leituras hidrológicas iguais a 35 foram preservadas e sinalizadas para revisão; valores sentinela de umidade do solo (-1000) foram excluídos dos cálculos analíticos, mantendo-se no arquivo original.</p></div></aside>
+      <!-- Aviso metodológico -->
+      <aside class="dashboard-notice">
+
+        <span>ⓘ</span>
+
+        <div>
+          <strong>Como interpretar este painel</strong>
+
+          <p>
+            Os gráficos apresentam medições históricas, não previsões
+            nem alertas oficiais. Os arquivos de origem não informam
+            as unidades de medida nem os limiares oficiais de risco.
+            Leituras hidrológicas iguais a 35 foram preservadas e
+            sinalizadas para revisão; valores sentinela de umidade
+            do solo (-1000) foram excluídos dos cálculos analíticos,
+            mantendo-se no arquivo original.
+          </p>
+        </div>
+
+      </aside>
+
     </section>
+
   </main>
+
   <div id="footer"></div>
+
 </body>
 </html>

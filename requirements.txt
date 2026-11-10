@@ -1,1 +1,8 @@
 # O pipeline atual usa somente a biblioteca padrão do Python 3.10+.
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+ipykernel
+jupyter
