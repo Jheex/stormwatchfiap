@@ -12,6 +12,19 @@
   <a href="https://colab.research.google.com/github/Jheex/stormwatchfiap/blob/main/global-solution/analise_stormwatch.ipynb">Google Colab</a>
 </p>
 
+## 👥 Equipe e créditos
+
+Desenvolvido colaborativamente por:
+
+- Jhonatan Lima Coelho
+- João Torres de Brito
+- Kewyn Montani Zancope
+- Mariana Miyasaka Maruyama
+- Thiago Rodrigues Pereira Santos
+
+**Instituição:** FIAP  
+**Projeto:** Global Solution — 2º Semestre de 2026
+
 ---
 
 ## 🌎 Sobre o projeto
@@ -89,7 +102,7 @@ Ele permite consultar os registros disponíveis, selecionar diferentes fontes e 
 - Comparação de informações por município.
 - Indicadores atualizados conforme os filtros selecionados.
 
-**Acesse a plataforma:** https://stormwatchfiap.vercel.app/
+**Acesse a plataforma:** https://stormwatchfiap-68rb.vercel.app/
 
 ## 🧪 Dados e fontes de informação
 
@@ -495,25 +508,6 @@ O projeto poderá ser ampliado futuramente por meio de:
 - Integração futura com informações oficiais de monitoramento e alertas.
 
 Essas possibilidades dependem da disponibilidade de dados, documentação técnica e critérios de validação apropriados.
-
-## 🎓 Sobre a Global Solution
-
-Projeto desenvolvido para a **Global Solution — 2º Semestre de 2026**, da FIAP.
-
-**Tema:** CitizenTech — Data Science, inovação e tecnologia colocando o cidadão no centro da transformação.
-
-## 👥 Equipe e créditos
-
-Desenvolvido colaborativamente por:
-
-- Jhonatan Lima Coelho
-- João Torres de Brito
-- Kewyn Montani Zancope
-- Mariana Miyasaka Maruyama
-- Thiago Rodrigues Pereira Santos
-
-**Instituição:** FIAP  
-**Projeto:** Global Solution — 2º Semestre de 2026
 
 ---
 
