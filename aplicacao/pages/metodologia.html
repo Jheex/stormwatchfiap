@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061426">
+
+    <meta name="description"
+        content="Conheça a metodologia do StormWatch: processamento, validação e integração de dados pluviométricos, hidrológicos e geotécnicos.">
+
+    <title>Metodologia | StormWatch</title>
+
+    <link rel="icon" href="/assets/img/logotipo.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src="/assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main class="inner-page">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-copy">
+
+                    <span class="eyebrow">
+                        <span class="pulse"></span>
+                        TRANSPARÊNCIA E PROCESSAMENTO DE DADOS
+                    </span>
+
+                    <h1>
+                        Por trás dos dados,
+                        <span>uma metodologia.</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Conheça como o StormWatch transforma diferentes
+                        conjuntos de dados ambientais em uma base
+                        organizada, validada e integrada para exploração
+                        e compreensão de cenários de risco.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a class="button button-primary"
+                            href="/pages/dashboard.html">
+                            Explorar Dashboard
+                            <span>↗</span>
+                        </a>
+
+                        <a class="button button-ghost"
+                            href="#pipeline">
+                            Conhecer as etapas
+                        </a>
+
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="dot-blue"></span>
+                        Pipeline de dados · Python · CSV · JSON
+                    </div>
+
+                </div>
+
+                <div class="hero-visual"
+                    aria-label="Representação visual da integração de dados ambientais">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="visual-core">
+
+                        <div class="visual-cloud">⌘</div>
+
+                        <div class="visual-wave"></div>
+                        <div class="visual-wave wave-two"></div>
+
+                        <span class="visual-label">
+                            STORMWATCH
+                            <br>
+                            <small>
+                                COLETAR · VALIDAR · INTEGRAR
+                            </small>
+                        </span>
+
+                    </div>
+
+                    <span class="float-tag tag-top">
+                        DATA SCIENCE
+                    </span>
+
+                    <span class="float-tag tag-bottom">
+                        INFORMAÇÃO AMBIENTAL
+                    </span>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- VISÃO GERAL -->
+        <section class="section section-tight">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">VISÃO GERAL</span>
+                        <h2>Como os dados são trabalhados?</h2>
+                    </div>
+
+                    <span class="status-pill">
+                        <span class="status-dot"></span>
+                        Período analisado · jan/2026
+                    </span>
+
+                </div>
+
+                <p class="section-intro">
+                    O StormWatch utiliza três conjuntos de dados
+                    ambientais com características diferentes.
+                    O processo organiza essas informações, verifica
+                    sua consistência e estabelece relações entre
+                    estações de monitoramento para permitir análises
+                    exploratórias.
+                </p>
+
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <span class="stat-icon">▦</span>
+                        <strong>737.685</strong>
+                        <span>Registros de origem</span>
+                        <small>Somatório das três bases</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon">☔</span>
+                        <strong>546</strong>
+                        <span>Estações pluviométricas</span>
+                        <small>193 municípios</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon">≈</span>
+                        <strong>22</strong>
+                        <span>Estações hidrológicas</span>
+                        <small>20 municípios</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon">⌁</span>
+                        <strong>18</strong>
+                        <span>Estações geotécnicas</span>
+                        <small>8 municípios</small>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FONTES DE DADOS -->
+        <section class="section risk-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">CONJUNTOS DE DADOS</span>
+                        <h2>Três perspectivas ambientais</h2>
+                    </div>
+
+                </div>
+
+                <div class="risk-grid">
+
+                    <article class="risk-card flood-card">
+
+                        <div class="risk-art rain-art">☔</div>
+
+                        <div class="risk-content">
+
+                            <span class="card-kicker">
+                                DADOS PLUVIOMÉTRICOS
+                            </span>
+
+                            <h3>Precipitação</h3>
+
+                            <p>
+                                Reúne registros relacionados à
+                                precipitação, permitindo observar
+                                a distribuição temporal das medições
+                                realizadas pelas estações.
+                            </p>
+
+                            <span class="text-link">
+                                468.164 registros
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="risk-card flood-card">
+
+                        <div class="risk-art rain-art">〰</div>
+
+                        <div class="risk-content">
+
+                            <span class="card-kicker">
+                                DADOS HIDROLÓGICOS
+                            </span>
+
+                            <h3>Monitoramento hídrico</h3>
+
+                            <p>
+                                Contém observações hidrológicas
+                                utilizadas para explorar o comportamento
+                                das medições registradas pelas estações.
+                            </p>
+
+                            <span class="text-link">
+                                25.072 registros
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="risk-card slide-card">
+
+                        <div class="risk-art soil-art">⌁</div>
+
+                        <div class="risk-content">
+
+                            <span class="card-kicker">
+                                DADOS GEOTÉCNICOS
+                            </span>
+
+                            <h3>Condições do solo</h3>
+
+                            <p>
+                                Reúne registros geotécnicos utilizados
+                                na exploração de variáveis relacionadas
+                                às condições do terreno.
+                            </p>
+
+                            <span class="text-link">
+                                244.449 registros
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PIPELINE -->
+        <section class="section" id="pipeline">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">PIPELINE DE PROCESSAMENTO</span>
+                        <h2>Da base original à informação integrada</h2>
+                    </div>
+
+                </div>
+
+                <p class="section-intro">
+                    O processamento foi desenvolvido em Python
+                    por meio de um script responsável por executar
+                    as etapas de preparação, validação, integração
+                    e geração de relatórios.
+                </p>
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+
+                        <span class="step-number">01</span>
+
+                        <div class="step-symbol">↓</div>
+
+                        <h3>Coleta e leitura</h3>
+
+                        <p>
+                            Leitura dos arquivos CSV originais,
+                            identificando os campos, registros,
+                            estações, municípios e informações
+                            temporais disponíveis.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">02</span>
+
+                        <div class="step-symbol">⌘</div>
+
+                        <h3>Padronização</h3>
+
+                        <p>
+                            Organização dos campos, conversão
+                            de valores numéricos e temporais
+                            e preparação dos registros para
+                            processamento.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">03</span>
+
+                        <div class="step-symbol">✓</div>
+
+                        <h3>Validação</h3>
+
+                        <p>
+                            Verificação de coordenadas, datas,
+                            campos obrigatórios, valores ausentes
+                            e possíveis duplicidades nas chaves
+                            de identificação.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">04</span>
+
+                        <div class="step-symbol">⌖</div>
+
+                        <h3>Integração</h3>
+
+                        <p>
+                            Correspondência espacial entre estações
+                            e relacionamento temporal dos registros
+                            quando há identificação e horário
+                            exatamente compatíveis.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="steps-grid" style="margin-top: 22px;">
+
+                    <article class="step-card">
+
+                        <span class="step-number">05</span>
+
+                        <div class="step-symbol">▤</div>
+
+                        <h3>Agregação</h3>
+
+                        <p>
+                            Organização dos registros em conjuntos
+                            resumidos, facilitando a construção
+                            de indicadores e gráficos no Dashboard.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">06</span>
+
+                        <div class="step-symbol">◉</div>
+
+                        <h3>Disponibilização</h3>
+
+                        <p>
+                            Geração de arquivos CSV e JSON,
+                            além de relatórios de qualidade
+                            para documentar o processamento
+                            e alimentar a aplicação.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTEGRAÇÃO ESPACIAL -->
+        <section class="section impact-section">
+
+            <div class="container impact-panel">
+
+                <div>
+
+                    <span class="eyebrow">
+                        INTEGRAÇÃO GEOGRÁFICA
+                    </span>
+
+                    <h2>
+                        Relacionando estações por proximidade
+                    </h2>
+
+                    <p>
+                        Para aproximar as diferentes fontes,
+                        o pipeline utiliza as coordenadas geográficas
+                        das estações e calcula a distância entre elas
+                        por meio da fórmula de Haversine.
+                    </p>
+
+                    <p>
+                        A correspondência espacial permite identificar
+                        estações com coordenadas coincidentes e
+                        candidatas próximas, sem assumir que estações
+                        diferentes representam necessariamente
+                        o mesmo ponto de monitoramento.
+                    </p>
+
+                </div>
+
+                <div class="ods-list">
+
+                    <div class="ods-item">
+                        <b>22</b>
+                        <span>
+                            Correspondências exatas entre
+                            22 estações hidrológicas e
+                            pluviométricas
+                        </span>
+                    </div>
+
+                    <div class="ods-item">
+                        <b>16</b>
+                        <span>
+                            Correspondências exatas entre
+                            18 estações geotécnicas e
+                            pluviométricas
+                        </span>
+                    </div>
+
+                    <div class="ods-item">
+                        <b>2</b>
+                        <span>
+                            Estações geotécnicas com
+                            correspondências aproximadas
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CRITÉRIOS TÉCNICOS -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">CRITÉRIOS DE PROCESSAMENTO</span>
+                        <h2>Como tratamos os registros?</h2>
+                    </div>
+
+                </div>
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+
+                        <span class="step-number">01</span>
+
+                        <h3>Correspondência exata</h3>
+
+                        <p>
+                            Coordenadas com distância de até
+                            1 metro são classificadas como
+                            correspondências exatas pelo critério
+                            adotado no pipeline.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">02</span>
+
+                        <h3>Correspondência aproximada</h3>
+
+                        <p>
+                            Distâncias superiores a 1 metro
+                            são identificadas como aproximações.
+                            Elas não são tratadas automaticamente
+                            como estações equivalentes.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">03</span>
+
+                        <h3>Relacionamento temporal</h3>
+
+                        <p>
+                            A integração temporal utiliza a
+                            identificação da estação e o horário
+                            exato do registro. Não é realizada
+                            interpolação ou associação por
+                            horário aproximado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">04</span>
+
+                        <h3>Controle de duplicidades</h3>
+
+                        <p>
+                            O processamento verifica duplicidades
+                            nas chaves definidas para identificar
+                            registros que possam comprometer
+                            a análise.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRATAMENTO DE INCONSISTÊNCIAS -->
+        <section class="section risk-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">QUALIDADE DOS DADOS</span>
+                        <h2>Tratamento de valores especiais</h2>
+                    </div>
+
+                </div>
+
+                <div class="risk-grid">
+
+                    <article class="risk-card slide-card">
+
+                        <div class="risk-art soil-art">−1000</div>
+
+                        <div class="risk-content">
+
+                            <span class="card-kicker">
+                                UMIDADE DO SOLO
+                            </span>
+
+                            <h3>Valor sentinela</h3>
+
+                            <p>
+                                Foram identificadas 10.038 ocorrências
+                                do valor -1000 na variável de umidade
+                                do solo. Esse valor foi tratado como
+                                ausente no campo analítico, preservando
+                                o registro original.
+                            </p>
+
+                            <span class="text-link">
+                                10.038 ocorrências identificadas
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="risk-card flood-card">
+
+                        <div class="risk-art rain-art">35</div>
+
+                        <div class="risk-content">
+
+                            <span class="card-kicker">
+                                LEITURAS HIDROLÓGICAS
+                            </span>
+
+                            <h3>Valores sinalizados para revisão</h3>
+
+                            <p>
+                                Foram identificadas 2.627 leituras
+                                com valor exatamente igual a 35.
+                                Esses registros foram preservados
+                                e sinalizados para análise, sem
+                                classificá-los automaticamente
+                                como inválidos.
+                            </p>
+
+                            <span class="text-link">
+                                2.627 leituras sinalizadas
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADOS DO PROCESSAMENTO -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">RESULTADOS DO PIPELINE</span>
+                        <h2>Arquivos gerados</h2>
+                    </div>
+
+                </div>
+
+                <p class="section-intro">
+                    Os resultados são organizados em diretórios
+                    separados, permitindo consultar os dados
+                    tratados, as integrações e os relatórios
+                    de qualidade.
+                </p>
+
+                <article class="chart-panel"
+                    style="padding: 28px;">
+
+                    <h3>Estrutura dos resultados</h3>
+
+                    <pre style="
+                        white-space: pre-wrap;
+                        overflow-wrap: anywhere;
+                        color: #a8d9ef;
+                        font-size: 14px;
+                        line-height: 1.9;
+                        margin-top: 18px;
+                    ">data/
+├── raw/
+│   ├── dados_geotecnicos.csv
+│   ├── dados_hidrologicos.csv
+│   └── dados_pluviometricos.csv
+│
+├── transformed/
+│   ├── clean/
+│   │   ├── dados_geotecnicos_limpos.csv
+│   │   ├── dados_hidrologicos_limpos.csv
+│   │   └── dados_pluviometricos_limpos.csv
+│   │
+│   ├── integrated/
+│   │   ├── catalogo_estacoes.csv
+│   │   ├── correspondencia_estacoes.csv
+│   │   ├── integracao_geotecnico_pluviometrico.csv
+│   │   └── integracao_hidrologico_pluviometrico.csv
+│   │
+│   └── reports/
+│       └── relatorio_qualidade.json
+│
+└── dashboard/
+    └── resumo.json</pre>
+
+                    <p style="margin-top: 18px;">
+                        O arquivo <strong>resumo.json</strong>
+                        reúne as agregações utilizadas pelo
+                        Dashboard, evitando que a interface
+                        precise carregar e processar diretamente
+                        todos os arquivos CSV originais.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIMITAÇÕES -->
+        <section class="section impact-section">
+
+            <div class="container impact-panel">
+
+                <div>
+
+                    <span class="eyebrow">
+                        TRANSPARÊNCIA CIENTÍFICA
+                    </span>
+
+                    <h2>
+                        Limitações e cuidados na interpretação
+                    </h2>
+
+                    <p>
+                        A qualidade da análise depende das
+                        características e dos metadados disponíveis
+                        nas fontes originais. Por isso, o StormWatch
+                        documenta as limitações identificadas
+                        durante o processamento.
+                    </p>
+
+                </div>
+
+                <div class="ods-list">
+
+                    <div class="ods-item">
+                        <b>01</b>
+                        <span>
+                            A base utilizada corresponde ao período
+                            de janeiro de 2026 e não é atualizada
+                            em tempo real.
+                        </span>
+                    </div>
+
+                    <div class="ods-item">
+                        <b>02</b>
+                        <span>
+                            As unidades de medida não foram
+                            informadas nos arquivos de origem.
+                        </span>
+                    </div>
+
+                    <div class="ods-item">
+                        <b>03</b>
+                        <span>
+                            Não foram fornecidos limiares oficiais
+                            para classificação de risco ou emissão
+                            de alertas.
+                        </span>
+                    </div>
+
+                    <div class="ods-item">
+                        <b>04</b>
+                        <span>
+                            Proximidade geográfica não garante
+                            equivalência entre estações ou
+                            representatividade espacial.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENCERRAMENTO -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">PRÓXIMA ETAPA</span>
+                        <h2>Explore os dados do StormWatch</h2>
+                    </div>
+                </div>
+
+                <p class="section-intro">
+                    Agora que você conhece o processo de preparação
+                    e integração, explore os indicadores e os
+                    registros ambientais disponíveis no painel.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a class="button button-primary"
+                        href="/pages/dashboard.html">
+                        Acessar Dashboard
+                        <span>↗</span>
+                    </a>
+
+                    <a class="button button-ghost"
+                        href="/index.html">
+                        Voltar ao início
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+</body>
+</html>

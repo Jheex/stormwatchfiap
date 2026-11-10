@@ -1,0 +1,10 @@
+# Dados brutos grandes: manter localmente e não versionar sem autorização/licença
+/data/raw/*.csv
+# Resultados reproduzíveis podem ser regenerados
+/data/transformed/clean/*.csv
+/data/transformed/integrated/*.csv
+/data/transformed/reports/*.json
+__pycache__/
+*.pyc
+*.py[cod]
+.venv/
