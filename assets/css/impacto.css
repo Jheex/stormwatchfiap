@@ -1,0 +1,1158 @@
+
+/* =========================================
+   STORMWATCH — NOSSO IMPACTO
+   Estilização exclusiva da página Impacto
+   Compatível com style.css
+========================================= */
+
+
+/* =========================================
+   1. VARIÁVEIS DA PÁGINA
+========================================= */
+
+:root {
+    --impact-cyan: #38d5f5;
+    --impact-blue: #2588e8;
+    --impact-purple: #8174ff;
+
+    --impact-bg: #071426;
+    --impact-card: rgba(12, 31, 53, .78);
+    --impact-border: rgba(130, 183, 220, .16);
+
+    --impact-text: #edf7ff;
+    --impact-muted: #a9bfd2;
+
+    --impact-glow: rgba(56, 213, 245, .15);
+}
+
+
+/* =========================================
+   2. CONFIGURAÇÕES GERAIS
+========================================= */
+
+.inner-page {
+    overflow: hidden;
+}
+
+.inner-page > .section {
+    position: relative;
+    padding-top: 105px;
+    padding-bottom: 105px;
+}
+
+.inner-page > .section:nth-of-type(even) {
+    background: linear-gradient(
+        180deg,
+        rgba(9, 27, 48, .28),
+        rgba(5, 17, 32, .12)
+    );
+}
+
+.inner-page .container {
+    position: relative;
+    z-index: 1;
+}
+
+.inner-page p {
+    color: var(--impact-muted);
+    line-height: 1.8;
+}
+
+.inner-page h2,
+.inner-page h3 {
+    color: var(--impact-text);
+}
+
+
+/* =========================================
+   3. HERO IMPACTO
+========================================= */
+
+.impact-hero {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 610px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(16, 111, 157, .2),
+            transparent 45%
+        ),
+        #061426;
+}
+
+.impacto-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 45%;
+
+    opacity: .72;
+}
+
+.impacto-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 13, 27, .98) 0%,
+            rgba(3, 13, 27, .91) 38%,
+            rgba(3, 13, 27, .58) 68%,
+            rgba(3, 13, 27, .28) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(3, 13, 27, .8),
+            transparent 55%
+        );
+}
+
+.impacto-hero-content {
+    width: 100%;
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.impacto-hero-copy {
+    max-width: 760px;
+}
+
+.impacto-hero-copy h1 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+}
+
+.impacto-hero-copy h1 span {
+    color: var(--impact-cyan);
+}
+
+.impacto-hero-copy .hero-lead {
+    max-width: 650px;
+    margin: 0;
+
+    color: #c5d8e8;
+
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.impacto-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.impacto-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border: 1px solid rgba(150, 190, 220, .25);
+    border-radius: 8px;
+
+    background: rgba(4, 20, 38, .72);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #d6e9f7;
+
+    font-size: .83rem;
+    font-weight: 500;
+
+    transition: all .25s ease;
+}
+
+.impacto-meta span:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(56, 213, 245, .5);
+
+    background: rgba(8, 35, 58, .9);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   4. TÍTULOS E INTRODUÇÕES
+========================================= */
+
+.inner-page .section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 35px;
+
+    margin-bottom: 28px;
+}
+
+.inner-page .eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--impact-cyan);
+
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.inner-page .section-heading h2 {
+    max-width: 760px;
+    margin: 0;
+
+    color: var(--impact-text);
+
+    font-size: clamp(1.9rem, 3.3vw, 2.8rem);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.inner-page .section-intro {
+    max-width: 850px;
+
+    margin: 0 0 42px;
+
+    color: var(--impact-muted);
+
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.inner-page .heading-side {
+    max-width: 370px;
+    margin: 0;
+
+    color: var(--impact-muted);
+
+    font-size: .94rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   5. CARDS DE CONTEÚDO
+========================================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.content-card {
+    position: relative;
+
+    min-width: 0;
+    padding: 32px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--impact-border);
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 43, 69, .88),
+            rgba(8, 24, 43, .94)
+        );
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.content-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--impact-cyan),
+        transparent 75%
+    );
+
+    opacity: .65;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(56, 213, 245, .38);
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .2);
+}
+
+.content-card .stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 24px;
+
+    border: 1px solid rgba(56, 213, 245, .2);
+    border-radius: 13px;
+
+    background: rgba(56, 213, 245, .09);
+
+    font-size: 1.55rem;
+}
+
+.content-card .card-kicker {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--impact-cyan);
+
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.content-card h2 {
+    margin: 0 0 16px;
+
+    color: #edf7ff;
+
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.content-card p {
+    margin: 0 0 13px;
+
+    color: var(--impact-muted);
+
+    font-size: .93rem;
+    line-height: 1.8;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.content-card.note-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 51, 75, .9),
+            rgba(8, 27, 48, .96)
+        );
+}
+
+
+/* =========================================
+   6. IMPACTO SOCIAL
+========================================= */
+
+.impact-section {
+    position: relative;
+}
+
+.impact-section.risk-section .content-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.impact-section.risk-section .content-card {
+    padding: 25px 21px;
+}
+
+.impact-section.risk-section .content-card .stat-icon {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 20px;
+
+    font-size: 1.35rem;
+}
+
+.impact-section.risk-section .content-card h2 {
+    font-size: 1.08rem;
+}
+
+.impact-section.risk-section .content-card p {
+    font-size: .87rem;
+}
+
+
+/* =========================================
+   7. IMPACTO AMBIENTAL
+========================================= */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.step-card {
+    position: relative;
+
+    min-width: 0;
+    min-height: 270px;
+
+    padding: 28px 23px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--impact-border);
+    border-radius: 15px;
+
+    background: var(--impact-card);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(56, 213, 245, .4);
+
+    background: rgba(14, 43, 69, .95);
+}
+
+.step-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+
+    color: rgba(56, 213, 245, .25);
+
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.step-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(56, 213, 245, .2);
+    border-radius: 13px;
+
+    background: rgba(56, 213, 245, .09);
+
+    font-size: 1.5rem;
+}
+
+.step-card h3 {
+    margin: 0 0 13px;
+
+    color: #edf7ff;
+
+    font-size: 1.13rem;
+}
+
+.step-card p {
+    margin: 0;
+
+    color: var(--impact-muted);
+
+    font-size: .9rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   8. IMPACTO TECNOLÓGICO
+========================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 220px;
+
+    padding: 26px 23px;
+
+    border: 1px solid var(--impact-border);
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 39, 65, .9),
+            rgba(7, 23, 42, .95)
+        );
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(56, 213, 245, .4);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+}
+
+.stat-card .stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(56, 213, 245, .2);
+    border-radius: 12px;
+
+    background: rgba(56, 213, 245, .09);
+
+    font-size: 1.35rem;
+}
+
+.stat-card strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--impact-cyan);
+
+    font-size: clamp(1.6rem, 2.3vw, 2.1rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.stat-card > span:not(.stat-icon) {
+    color: #e5f1fb;
+
+    font-size: .91rem;
+    font-weight: 600;
+}
+
+.stat-card small {
+    margin-top: 9px;
+
+    color: var(--impact-muted);
+
+    font-size: .78rem;
+    line-height: 1.5;
+}
+
+.data-footnote {
+    margin: 23px 0 0;
+
+    color: #829bb1 !important;
+
+    font-size: .78rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   9. AGENDA 2030 — ODS
+========================================= */
+
+.impact-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+
+    padding: 42px;
+
+    border: 1px solid rgba(56, 213, 245, .2);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(37, 136, 232, .13),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(12, 36, 62, .96),
+            rgba(7, 22, 41, .98)
+        );
+
+    box-shadow: 0 20px 55px rgba(0, 0, 0, .16);
+}
+
+.impact-panel > div:first-child h2 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+    line-height: 1.25;
+    letter-spacing: -.7px;
+}
+
+.impact-panel > div:first-child p {
+    margin: 0;
+
+    color: var(--impact-muted);
+
+    font-size: .95rem;
+    line-height: 1.85;
+}
+
+.ods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.ods-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 17px;
+
+    border: 1px solid rgba(130, 183, 220, .14);
+    border-radius: 12px;
+
+    background: rgba(3, 17, 33, .55);
+
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ods-item:hover {
+    transform: translateX(4px);
+
+    border-color: rgba(56, 213, 245, .35);
+}
+
+.ods-item > b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        var(--impact-blue),
+        var(--impact-purple)
+    );
+
+    color: #ffffff;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.ods-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #eaf6ff;
+
+    font-size: .91rem;
+}
+
+.ods-item p {
+    margin: 0;
+
+    color: var(--impact-muted);
+
+    font-size: .81rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   10. TRANSPARÊNCIA
+========================================= */
+
+.inner-page .section-tight {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.callout {
+    position: relative;
+
+    padding: 30px 34px;
+
+    border: 1px solid rgba(56, 213, 245, .2);
+    border-left: 3px solid var(--impact-cyan);
+    border-radius: 12px;
+
+    background: rgba(10, 32, 54, .72);
+}
+
+.callout > strong {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #eaf7ff;
+
+    font-size: 1.05rem;
+}
+
+.callout p {
+    margin: 0 0 13px;
+
+    color: var(--impact-muted);
+
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+.callout p:last-of-type {
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--impact-cyan);
+
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        gap .25s ease,
+        color .25s ease;
+}
+
+.text-link:hover {
+    gap: 12px;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   11. CHAMADA FINAL
+========================================= */
+
+.impact-section > .container > .impact-panel:last-child {
+    grid-template-columns: 1.3fr .7fr;
+    align-items: center;
+}
+
+.impact-section > .container > .impact-panel:last-child > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.impact-section .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 46px;
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-size: .88rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.impact-section .button:hover {
+    transform: translateY(-3px);
+}
+
+.impact-section .button-primary {
+    border: 1px solid var(--impact-cyan);
+
+    background: linear-gradient(
+        135deg,
+        var(--impact-blue),
+        #1764c7
+    );
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(37, 136, 232, .2);
+}
+
+.impact-section .button-primary:hover {
+    background: linear-gradient(
+        135deg,
+        #36b7f0,
+        #2678db
+    );
+
+    box-shadow: 0 12px 30px rgba(37, 136, 232, .3);
+}
+
+.impact-section .button-ghost {
+    border: 1px solid rgba(160, 196, 225, .3);
+
+    background: rgba(8, 24, 43, .5);
+
+    color: #d7e8f6;
+}
+
+.impact-section .button-ghost:hover {
+    border-color: var(--impact-cyan);
+
+    background: rgba(56, 213, 245, .08);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   12. RESPONSIVIDADE — NOTEBOOK
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .impact-section.risk-section .content-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps-grid,
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .impact-panel {
+        gap: 30px;
+        padding: 34px;
+    }
+
+}
+
+
+/* =========================================
+   13. RESPONSIVIDADE — TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .inner-page > .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .impact-hero {
+        min-height: 570px;
+    }
+
+    .impacto-hero-content {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .impacto-hero-copy h1 {
+        font-size: clamp(2.6rem, 7vw, 4rem);
+    }
+
+    .inner-page .section-heading {
+        display: block;
+    }
+
+    .inner-page .heading-side {
+        max-width: 650px;
+        margin-top: 18px;
+    }
+
+    .impact-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-section > .container > .impact-panel:last-child {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-section > .container > .impact-panel:last-child > div:last-child {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================================
+   14. RESPONSIVIDADE — CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .inner-page > .section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .impact-hero {
+        min-height: 610px;
+        align-items: flex-end;
+    }
+
+    .impacto-hero-image {
+        object-position: 58% center;
+    }
+
+    .impacto-hero-overlay {
+        background:
+            linear-gradient(
+                0deg,
+                rgba(3, 13, 27, .98) 0%,
+                rgba(3, 13, 27, .85) 48%,
+                rgba(3, 13, 27, .3) 100%
+            );
+    }
+
+    .impacto-hero-content {
+        padding-top: 110px;
+        padding-bottom: 55px;
+    }
+
+    .impacto-hero-copy h1 {
+        font-size: clamp(2.35rem, 10vw, 3.4rem);
+        letter-spacing: -1.5px;
+    }
+
+    .impacto-hero-copy .hero-lead {
+        font-size: .95rem;
+    }
+
+    .impacto-meta {
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    .impacto-meta span {
+        padding: 8px 10px;
+        font-size: .74rem;
+    }
+
+    .inner-page .section-heading h2 {
+        font-size: 1.85rem;
+    }
+
+    .inner-page .section-intro {
+        font-size: .92rem;
+    }
+
+    .content-grid,
+    .impact-section.risk-section .content-grid,
+    .steps-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card {
+        padding: 26px;
+    }
+
+    .impact-section.risk-section .content-card {
+        padding: 26px;
+    }
+
+    .step-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .stat-card {
+        min-height: 190px;
+    }
+
+    .impact-panel {
+        padding: 26px 22px;
+        border-radius: 15px;
+    }
+
+    .ods-item {
+        align-items: flex-start;
+        padding: 14px;
+    }
+
+    .callout {
+        padding: 25px 22px;
+    }
+
+    .impact-section > .container > .impact-panel:last-child > div:last-child {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .impact-section .button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   15. RESPONSIVIDADE — CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .impacto-hero-copy h1 {
+        font-size: 2.2rem;
+    }
+
+    .impacto-meta span {
+        font-size: .69rem;
+    }
+
+    .inner-page .section-heading h2 {
+        font-size: 1.65rem;
+    }
+
+    .content-card,
+    .impact-section.risk-section .content-card {
+        padding: 22px;
+    }
+
+    .impact-panel {
+        padding: 22px 18px;
+    }
+
+}
+
+
+/* =========================================
+   16. ACESSIBILIDADE — MOVIMENTO REDUZIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .content-card,
+    .step-card,
+    .stat-card,
+    .ods-item,
+    .impacto-meta span,
+    .impact-section .button,
+    .text-link {
+        transition: none;
+    }
+
+    .content-card:hover,
+    .step-card:hover,
+    .stat-card:hover,
+    .ods-item:hover,
+    .impacto-meta span:hover,
+    .impact-section .button:hover {
+        transform: none;
+    }
+
+}
+
+/* =========================================
+   AJUSTE — POSICIONAMENTO DO TEXTO DO HERO
+========================================= */
+
+.impacto-hero-content {
+    width: 100%;
+    max-width: 1160px;
+    margin-inline: auto;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.impacto-hero-copy {
+    max-width: 720px;
+}
+
+/* Notebook */
+@media (max-width: 800px) {
+    .impacto-hero-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .impacto-hero-copy {
+        padding-left: 10px;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .impacto-hero-content {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .impacto-hero-copy {
+        padding-left: 0;
+    }
+}
