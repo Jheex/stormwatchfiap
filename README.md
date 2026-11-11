@@ -302,7 +302,7 @@ stormwatchfiap/
 │   │   └── style.css
 │   │
 │   ├── img/
-│   │   └── logotipo.png
+│   │   └── logotipo.webp
 │   │
 │   └── js/
 │       ├── dashboard.js
