@@ -7,7 +7,7 @@
     <meta name="description" content="Notebook de análise de dados ambientais do projeto StormWatch.">
     <title>Notebook de Análise | StormWatch</title>
 
-    <link rel="icon" href="/assets/img/logotipo.png">
+    <link rel="icon" href="/assets/img/logotipo.webp">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/notebook.css">
 
@@ -36,7 +36,7 @@
             <!-- Imagem de fundo -->
 
             <img
-                src="/assets/img/tsunami.png"
+                src="/assets/img/tsunami.webp"
                 alt="Tempestade elétrica sobre uma região urbana"
                 class="hero-image"
             >
@@ -174,14 +174,14 @@
 
             // Imagens geradas no notebook (Matplotlib, por exemplo).
 
-            if (data["image/png"]) {
+            if (data["image/webp"]) {
                 const img = document.createElement("img");
 
-                const encoded = Array.isArray(data["image/png"])
-                    ? data["image/png"].join("")
-                    : data["image/png"];
+                const encoded = Array.isArray(data["image/webp"])
+                    ? data["image/webp"].join("")
+                    : data["image/webp"];
 
-                img.src = "data:image/png;base64," + encoded;
+                img.src = "data:image/webp;base64," + encoded;
                 img.alt = "Gráfico gerado pelo notebook";
 
                 wrapper.appendChild(img);
