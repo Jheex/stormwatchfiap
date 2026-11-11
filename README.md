@@ -290,19 +290,31 @@ O dashboard consome diretamente esse arquivo por meio de JavaScript, sem precisa
 ## 📁 Estrutura do repositório
 
 ```text
+
 stormwatchfiap/
 │
+├── .gitignore
 ├── index.html
 ├── README.md
 ├── requirements.txt
 │
 ├── assets/
+│   │
 │   ├── css/
 │   │   ├── dashboard.css
+│   │   ├── impacto.css
+│   │   ├── index.css
+│   │   ├── metodologia.css
+│   │   ├── notebook.css
 │   │   └── style.css
 │   │
 │   ├── img/
-│   │   └── logotipo.webp
+│   │   ├── favicon.webp
+│   │   ├── furacao.webp
+│   │   ├── incendio.webp
+│   │   ├── logotipo.webp
+│   │   ├── tempestade.webp
+│   │   └── tsunami.webp
 │   │
 │   └── js/
 │       ├── dashboard.js
@@ -318,6 +330,7 @@ stormwatchfiap/
 │   └── metodologia.md
 │
 ├── global-solution/
+│   │
 │   ├── analise_stormwatch.ipynb
 │   │
 │   └── dados/
