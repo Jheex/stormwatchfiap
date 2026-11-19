@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://stormwatchfiap.vercel.app/">Acessar plataforma</a>
-  <a href="https://N/A">Video Pitch</a>
+  <a href="https://https://youtu.be/Anv4xL056zY">Video Pitch</a>
   <a href="https://github.com/Jheex/stormwatchfiap">Repositório GitHub</a>
   <a href="https://colab.research.google.com/github/Jheex/stormwatchfiap/blob/main/global-solution/analise_stormwatch.ipynb">Google Colab</a>
 </p>
